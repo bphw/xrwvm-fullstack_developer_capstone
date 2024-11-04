@@ -124,3 +124,12 @@ img{
     text-align:center;
     box-shadow: 2px 2px 3px #999;  
 }
+
+.vl {
+    border-left: 6px solid green;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+  }
