@@ -8,13 +8,15 @@
 
 const logout = async (e) => {
 //Include the code for logout here.
+// event.stopPropagation();
+// event.nativeEvent.stopImmediatePropagation();
+console.log(e);
+alert(1);
   let logout_url = window.location.origin+"/djangoapp/logout";
-  alert(logout_url);
-  const res = await fetch(logout_url, {
-    method: "GET",
-  });
-
+  const res = await fetch(logout_url);
+  alert(2);
   const json = await res.json();
+  console.log(json);
   if (json) {
     let username = sessionStorage.getItem('username');
     sessionStorage.removeItem('username');
